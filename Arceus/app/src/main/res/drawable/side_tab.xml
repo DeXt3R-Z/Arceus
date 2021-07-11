@@ -1,78 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <!--the shadow comes from here-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="7dp"/>
+    <solid android:color="#141414"/>
+    <padding android:right="5dp"/>
+    <size android:height="1920dp"
+        android:width="1080dp"/>
 
-
-    <item
-        android:bottom="0dp"
-        android:left="0dp"
-        android:right="1.3dp"
-        android:top="3dp">
-        <shape>
-            <corners android:radius="5dp">
-
-            </corners>
-            <solid android:color="#FF044B" />
-            <padding android:top="0dp" android:right="0dp" android:bottom="1dp" android:left="1dp" />
-        </shape>
-    </item>
-
-
-
-    <item
-        android:bottom="0dp"
-        android:left="0dp"
-        android:right="0.9dp"
-        android:top="1.4dp">
-        <shape>
-            <corners android:radius="5dp">
-
-            </corners>
-            <solid android:color="#4A0919" />
-            <padding android:top="0dp" android:right="0dp" android:bottom="0.8dp" android:left="0.8dp" />
-        </shape>
-    </item>
-
-
-    <item
-        android:bottom="0dp"
-        android:left="0dp"
-        android:right="0.6dp"
-        android:top="1dp">
-        <shape>
-            <corners android:radius="5dp">
-
-            </corners>
-            <solid android:color="#21292E" />
-            <padding android:top="0dp" android:right="0dp" android:bottom="0.6dp" android:left="0.6dp" />
-        </shape>
-    </item>
-
-    <item
-        android:bottom="0dp"
-        android:left="0dp"
-        android:right="0.4dp"
-        android:top="0.8dp">
-        <shape>
-            <corners android:radius="5dp">
-
-            </corners>
-            <solid android:color="#132230" />
-            <padding android:top="0dp" android:right="0dp" android:bottom="0.4dp" android:left="0.4dp" />
-        </shape>
-    </item>
-
-    <item
-        android:bottom="0dp"
-        android:left="0dp"
-        android:right="0dp"
-        android:top="0dp">
-        <!--whatever you want in the background, here i preferred solid white -->
-        <shape android:shape="rectangle">
-            <corners android:radius="5dp"/>
-            <solid android:color="@color/sidetab_g2"/>
-
-
-        </shape>
-    </item>
-</layer-list>
+</shape>

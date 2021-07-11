@@ -1,40 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#080E13"
+    android:background="@color/background"
     tools:context=".MainActivity">
 
-    <View
+    <carbon.widget.LinearLayout
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:background="@drawable/side_tab"
-        android:layout_weight="1.8"
-        android:layout_marginTop="5dp"
+        android:layout_weight="1.3"
+        android:layout_marginTop="7dp"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        app:carbon_elevation="20dp"
+        app:carbon_cornerRadius="5dp"
+        app:carbon_elevationShadowColor="#707070"
          />
     <carbon.widget.LinearLayout
         android:layout_width="0dp"
         android:layout_weight="10"
         android:layout_height="match_parent"
-        android:background="#080E13"
+        android:background="@color/background"
         android:orientation="vertical">
+
         <carbon.widget.LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="2"
+            android:background="@drawable/details"
+            app:carbon_elevation="16dp"
+            app:carbon_cornerRadius="9dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="7dp"
+            app:carbon_elevationShadowColor="#707070"
+            android:orientation="vertical"
+            >
 
+            <carbon.widget.RelativeLayout
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_pic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/profilepic48"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"/>
+                <carbon.widget.TextView
+                    android:id="@+id/profile_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/profile_pic"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="12.5dp"
+                    android:text="Lionel Messi"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:textSize="19dp"
+                    android:textColor="#F4C5CA"
+                    />
+
+
+            </carbon.widget.RelativeLayout>
+
+            <carbon.widget.Divider
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#9A202020"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"/>
+
+            <carbon.widget.LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.3"
+                android:background="@drawable/experiment"
+                android:orientation="horizontal"
+                android:layout_marginLeft="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginRight="3dp"/>
 
         </carbon.widget.LinearLayout>
-
 
         <ListView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="3"/>
+            android:layout_weight="10"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <carbon.widget.LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/details"
+            app:carbon_elevation="3.5dp"
+            app:carbon_cornerRadius="9dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="7dp"
+            app:carbon_elevationShadowColor="#707070"
+            android:orientation="horizontal"/>
+
     </carbon.widget.LinearLayout>
 
 </LinearLayout>
