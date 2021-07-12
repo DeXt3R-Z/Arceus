@@ -5,7 +5,7 @@
         android:bottomRightRadius="12dp"
         android:topLeftRadius="3dp"
         android:topRightRadius="3dp"/>
-    <solid android:color="#171717"/>
+    <solid android:color="@color/floating"/>
 
 
 
