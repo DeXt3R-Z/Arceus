@@ -8,6 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="sidetab_g1">#081119</color>
-    <color name="sidetab_g2">#0C151C</color>
-    <color name="background">#121212</color>
+    <color name="shadow">#8E8174</color>
+    <color name="background">#212426</color>
+    <color name="floating">#1E1F1F</color>
+    <color name="nonHighlighted">#424242</color>
+
 </resources>
