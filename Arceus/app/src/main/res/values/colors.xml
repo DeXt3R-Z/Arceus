@@ -8,9 +8,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="sidetab_g1">#081119</color>
-    <color name="shadow">#8E8174</color>
+    <color name="shadow">#7E7B79</color>
     <color name="background">#212426</color>
-    <color name="floating">#1E1F1F</color>
-    <color name="nonHighlighted">#424242</color>
-
+    <color name="floating">#171717</color>
+    <color name="nonHighlighted">#414141</color>
+    <color name="yellow_ochre">#B39B6D</color>
+    <color name="divider">#353535</color>
+    <color name="last_text">#988F7C</color>
+    <color name="chatbg">#1E1E1E</color>
 </resources>
