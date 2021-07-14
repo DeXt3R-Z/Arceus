@@ -29,7 +29,7 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/side_tab" />
 
-             <com.example.arceus.VerticalTextView
+            <com.example.arceus.VerticalTextView
                 android:id="@+id/verticalTextView2"
                 android:layout_width="18.5dp"
                 android:layout_height="match_parent"
@@ -91,12 +91,10 @@
         <carbon.widget.LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/details"
+            android:background="@drawable/detailstest"
+            app:carbon_elevation="6dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_marginTop="5dp"
-            app:carbon_elevation="4dp"
-            app:carbon_cornerRadius="7dp"
             app:carbon_elevationShadowColor="@color/shadow"
             android:orientation="vertical"
             >
