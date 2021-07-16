@@ -22,7 +22,7 @@ public class ChatAdapter extends ArrayAdapter<Chat> {
         View item=convertView;
         if(item==null)
         {
-            item= LayoutInflater.from(getContext()).inflate(R.layout.mainscreen_chats,parent,false);
+            item= LayoutInflater.from(getContext()).inflate(R.layout.privatemessages,parent,false);
         }
         Chat pos=getItem(position);
         TextView name=item.findViewById(R.id.name);
@@ -31,8 +31,8 @@ public class ChatAdapter extends ArrayAdapter<Chat> {
         date.setText(pos.getDate());
         TextView lastText=item.findViewById(R.id.lastMessage);
         lastText.setText(pos.getLastText());
-        TextView typing=item.findViewById(R.id.typing);
-        typing.setText(pos.getTyping());
+        //TextView typing=item.findViewById(R.id.typing);
+        //typing.setText(pos.getTyping());
         TextView pending=item.findViewById(R.id.pending);
         pending.setText(pos.getPendingMessages());
         ImageView dp=item.findViewById(R.id.displayPicture);
