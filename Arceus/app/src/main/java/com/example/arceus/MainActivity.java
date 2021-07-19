@@ -2,12 +2,14 @@ package com.example.arceus;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.LinearGradient;
 import android.graphics.Shader;
 import android.os.Bundle;
 import android.text.TextPaint;
 import android.util.Size;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -47,5 +49,15 @@ public class MainActivity extends AppCompatActivity {
         ListView chats=findViewById(R.id.list);
         ChatAdapter details=new ChatAdapter(this,block);
         chats.setAdapter(details);
+
+        VerticalTextView x = findViewById(R.id.verticalTextView3);
+
+        x.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, group_chat.class);
+                startActivity(i);
+            }
+        });
     }
 }
