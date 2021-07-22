@@ -11,9 +11,6 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class ChatAdapter extends ArrayAdapter<Chat> {
-    Chat pos;
-    static String nm;
-    static int DP;
     public ChatAdapter(Activity context, ArrayList<Chat> chat)
     {
         super(context,0,chat);
@@ -26,10 +23,9 @@ public class ChatAdapter extends ArrayAdapter<Chat> {
         {
             item= LayoutInflater.from(getContext()).inflate(R.layout.privatemessages,parent,false);
         }
-        pos=getItem(position);
+        Chat pos=getItem(position);
         TextView name=item.findViewById(R.id.name);
-        nm=pos.getNaame();
-        name.setText(nm);
+        name.setText(pos.getNaame());
         TextView date=item.findViewById(R.id.date);
         date.setText(pos.getDate());
         TextView lastText=item.findViewById(R.id.lastMessage);
@@ -39,17 +35,7 @@ public class ChatAdapter extends ArrayAdapter<Chat> {
         TextView pending=item.findViewById(R.id.pending);
         pending.setText(pos.getPendingMessages());
         ImageView dp=item.findViewById(R.id.displayPicture);
-        DP=pos.getDP();
-        dp.setImageResource(DP);
+        dp.setImageResource(pos.getDP());
         return item;
-    }
-    public static String getNM()
-    {
-        return nm;
-    }
-
-    public static int getDP()
-    {
-        return DP;
     }
 }

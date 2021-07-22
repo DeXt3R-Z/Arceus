@@ -25,8 +25,6 @@ public class ChatBox extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.chat_box);
-        TextView headName=findViewById(R.id.namespace);
-        headName.setText(ChatAdapter.getNM());
         ArrayList<IndividualText> storemessages=new ArrayList<IndividualText>();
         ImageView send=findViewById(R.id.send);
         send.setOnClickListener(new View.OnClickListener() {

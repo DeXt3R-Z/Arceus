@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.test);
+        setContentView(R.layout.activity_main);
 
         TextView textView = (TextView) findViewById(R.id.online);
         textView.setText("ONLINE".toUpperCase());
