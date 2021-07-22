@@ -11,8 +11,6 @@
     app:carbon_cornerRadius="6dp"
     app:carbon_elevationShadowColor="@color/shadow"-->
 
-
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="75dp"
@@ -182,6 +180,5 @@
             android:background="@drawable/divider"/>-->
 
     </RelativeLayout>
-
 
 </carbon.widget.LinearLayout>
