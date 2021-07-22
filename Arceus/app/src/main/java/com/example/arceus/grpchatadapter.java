@@ -26,14 +26,19 @@ public class grpchatadapter extends ArrayAdapter<grpchat> {
         grpchat pos=getItem(position);
         TextView name=item1.findViewById(R.id.grpname);
         name.setText(pos.getgrpName());
+
         TextView date=item1.findViewById(R.id.grpdate);
         date.setText(pos.getgrpDate());
+
         TextView lastText=item1.findViewById(R.id.grplastMessage);
         lastText.setText(pos.getgrpLastText());
+
         TextView typing=item1.findViewById(R.id.grptyping);
         typing.setText(pos.getgrpTyping());
+
         TextView pending=item1.findViewById(R.id.grppending);
         pending.setText(pos.getgrpPendingMessages());
+
         ImageView dp=item1.findViewById(R.id.grpdisplayPicture);
         dp.setImageResource(pos.getgrpDP());
 
