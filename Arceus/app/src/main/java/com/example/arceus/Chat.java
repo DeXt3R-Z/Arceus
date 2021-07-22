@@ -3,7 +3,8 @@ package com.example.arceus;
 import android.graphics.drawable.Drawable;
 
 public class Chat {
-    String mName,mLastText,mDate,mPendingMessages,mTyping;
+    public static String mName;
+    String mLastText,mDate,mPendingMessages,mTyping;
     int mDisplayPic;
     public Chat(String name,String lastText, String date, String pendingMessages, String typing, int dp)
     {
@@ -14,7 +15,7 @@ public class Chat {
         mTyping=typing;
         mDisplayPic=dp;
     }
-    public String getNaame()
+    public static String getNaame()
     {
         return mName;
     }
@@ -38,5 +39,6 @@ public class Chat {
     {
         return mDisplayPic;
     }
+
 
 }

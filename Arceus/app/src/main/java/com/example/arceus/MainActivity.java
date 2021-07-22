@@ -10,7 +10,9 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.text.TextPaint;
 import android.util.Size;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -96,8 +98,18 @@ public class MainActivity extends AppCompatActivity {
 //        {
 //            @Override
 //            public void onClick(View v) {
-//
+//                Intent mintent=new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+//                startActivity(mintent);
 //            }
 //        });
+
+        chats.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View convertView, int position, long id) {
+                Intent i=new Intent(MainActivity.this,ChatBox.class);
+                startActivity(i);
+            }
+        });
+
     }
 }
