@@ -1,97 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Chatlayout"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".Chatlayout">
 
     <carbon.widget.LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:paddingTop="3.5dp" >
+        android:layout_height="50dp"
+        android:background="@drawable/chatpage_top"
+        android:orientation="horizontal">
 
-        <carbon.widget.ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="12dp" />
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/dp"
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:src="@drawable/profilepic48"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="3dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center_vertical"
+                android:foregroundGravity="center"
+                android:rotation="180"
+                android:src="@drawable/arrow" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/dp"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="1dp"
+                android:src="@drawable/profilepic48" />
+
+        </LinearLayout>
 
         <TextView
+            android:id="@+id/namespace"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="11dp"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="1"
             android:text="Lionel Messi"
-            android:textSize="25dp"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="13dp" />
+            android:textSize="17.5sp" />
 
-        <carbon.widget.ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center_vertical"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="8dp" />
+            android:src="@drawable/call" />
 
-        <carbon.widget.ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginTop="8dp" />
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8sp"
+            android:layout_marginRight="25dp"
+            android:src="@drawable/videocall" />
 
     </carbon.widget.LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" >
+        android:layout_weight="1"
+        android:background="@color/background">
 
     </ScrollView>
 
-    <carbon.widget.LinearLayout
-        android:orientation="horizontal"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:paddingTop="3.5dp"
-        android:layout_gravity="bottom">
+        android:layout_height="40dp"
+        android:background="@color/floating"
+        android:orientation="horizontal">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="3dp" />
+        <ImageView
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/emoji" />
 
         <EditText
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp"
             android:layout_weight="1"
-            android:hint="Type a Message..."
-            android:textSize="20dp"
-            android:textColor="@color/black"
-            android:paddingTop="10dp"
-            android:layout_marginTop="3dp"
-            android:paddingLeft="7dp"
             android:background="@android:color/transparent"
-            android:fontFamily="sans-serif-light" />
+            android:hint="Make keyboard go Brrr...."
+            android:paddingLeft="8dp"
+            android:paddingBottom="1dp"
+            android:textColorHint="@color/last_text"
+            android:textSize="16dp" />
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="3dp" />
+        <ImageView
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="4dp"
+            android:rotation="-45"
+            android:src="@drawable/attach" />
 
-    </carbon.widget.LinearLayout>
+        <ImageView
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="4dp"
+            android:src="@drawable/snap" />
+
+        <ImageView
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:src="@drawable/voicerecorder" />
+
+
+    </LinearLayout>
+
 
 </LinearLayout>

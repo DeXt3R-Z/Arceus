@@ -64,7 +64,7 @@
         </RelativeLayout>
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/camera"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/details"
@@ -91,10 +91,12 @@
         <carbon.widget.LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/detailstest"
-            app:carbon_elevation="6dp"
+            android:background="@drawable/details"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
+            android:layout_marginTop="3dp"
+            app:carbon_elevation="4dp"
+            app:carbon_cornerRadius="7dp"
             app:carbon_elevationShadowColor="@color/shadow"
             android:orientation="vertical"
             >
@@ -154,20 +156,48 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:background="@drawable/experiment"
+                android:layout_height="40dp"
                 android:orientation="horizontal"
                 >
 
-                <TextView
-                    android:id="@+id/online"
+                <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="45dp"
-                    android:text="ONLINE"
-                    android:textSize="16.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/inbox"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="INBOX"
+                        android:textSize="14dp"
+                        android:gravity="center"
+                        android:fontFamily="monospace"
+                        tools:ignore="NestedWeights" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:background="@drawable/selected_tab_underline"
+                        />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/divider"/>
+
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="STATUS"
+                    android:textSize="14dp"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:fontFamily="monospace"
+                    android:textColor="@color/yellow_ochre"
                     />
 
                 <View
@@ -176,14 +206,14 @@
                     android:background="@drawable/divider"/>
 
                 <TextView
-                    android:id="@+id/offline"
+                    android:id="@+id/calls"
                     android:layout_width="0dp"
-                    android:layout_height="45dp"
-                    android:text="OFFLINE"
-                    android:textSize="16.5dp"
+                    android:layout_height="match_parent"
+                    android:text="CALLS"
+                    android:textSize="14dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textColor="@color/nonHighlighted"
+                    android:textColor="@color/yellow_ochre"
                     android:fontFamily="monospace"
                     />
 
@@ -198,67 +228,61 @@
             android:layout_weight="15"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             android:orientation="horizontal"
             android:divider="@android:color/transparent"
-            android:dividerHeight="6dp"
+            android:dividerHeight="4dp"
             android:scrollbars="none"/>
 
         <carbon.widget.LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.55"
+            android:layout_weight="0.68"
             android:background="@drawable/details"
-            app:carbon_elevation="3.5dp"
+            app:carbon_elevation="3dp"
             app:carbon_cornerRadius="7dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_marginBottom="5dp"
+            android:layout_marginBottom="3dp"
             app:carbon_elevationShadowColor="@color/shadow"
             android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+
+            <TextView
+                android:id="@+id/online"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:background="@drawable/experiment"
-                android:orientation="horizontal"
-                >
+                android:textSize="14dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#B6B6B6"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="1dp"
+                android:fontFamily="monospace"
+                tools:text="ONLINE"
+                />
 
-                <TextView
-                    android:id="@+id/status"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:text="STATUS"
-                    android:textSize="14dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textColor="@color/yellow_ochre"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginRight="1dp"
-                    android:fontFamily="monospace"
-                    />
+            <View
+                android:layout_width="1.5dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/divider"/>
 
-                <View
-                    android:layout_width="1.5dp"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/divider"/>
+            <TextView
+                android:id="@+id/offline"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="OFFLINE"
+                android:textSize="14dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/nonHighlighted"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="1dp"
+                android:fontFamily="monospace"
+                />
 
-                <TextView
-                    android:id="@+id/call"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:text="CALLS"
-                    android:textSize="14dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textColor="@color/yellow_ochre"
-                    android:layout_marginRight="2dp"
-                    android:layout_marginLeft="1dp"
-                    android:fontFamily="monospace"
-                    />
 
-            </LinearLayout>
 
         </carbon.widget.LinearLayout>
 
