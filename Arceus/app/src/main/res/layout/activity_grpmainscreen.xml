@@ -20,7 +20,7 @@
         >
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/displayPicture"
+            android:id="@+id/grpdisplayPicture"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginRight="12dp"
@@ -28,10 +28,10 @@
             android:src="@drawable/tanmay"/>
 
         <TextView
-            android:id="@+id/name"
+            android:id="@+id/grpname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/displayPicture"
+            android:layout_toRightOf="@id/grpdisplayPicture"
             android:layout_marginTop="4dp"
             android:gravity="fill_vertical"
             android:text="Name"
@@ -39,11 +39,11 @@
             android:textColor="#DA8841"
             />
         <TextView
-            android:id="@+id/lastMessage"
+            android:id="@+id/grplastMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/displayPicture"
-            android:layout_below="@id/name"
+            android:layout_toRightOf="@id/grpdisplayPicture"
+            android:layout_below="@id/grpname"
             android:text="Last message sent from the user or any other person"
             android:textSize="15dp"
             android:textColor="#AF9E7D"
@@ -57,7 +57,7 @@
             android:background="@drawable/chat_count">
 
             <TextView
-                android:id="@+id/pending"
+                android:id="@+id/grppending"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="7"
@@ -70,7 +70,7 @@
         </RelativeLayout>
 
         <TextView
-            android:id="@+id/date"
+            android:id="@+id/grpdate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -99,7 +99,7 @@
         >
 
         <TextView
-            android:id="@+id/typing"
+            android:id="@+id/grptyping"
             android:layout_width="wrap_content"
             android:layout_height="25dp"
             android:text="typing..."
@@ -111,34 +111,34 @@
             android:layout_toLeftOf="@id/div3"/>
 
         <View
-            android:id="@+id/div1"
+            android:id="@+id/grpdiv1"
             android:layout_width="1.5dp"
             android:layout_height="match_parent"
             android:background="@drawable/divider"
             android:layout_alignParentRight="true"/>
 
         <ImageView
-            android:id="@+id/videoCall"
+            android:id="@+id/grpvideoCall"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/videocall"
-            android:layout_toLeftOf="@id/div1"
+            android:layout_toLeftOf="@id/grpdiv1"
             android:layout_centerVertical="true"
             />
 
         <View
-            android:id="@+id/div2"
+            android:id="@+id/grpdiv2"
             android:layout_width="1.5dp"
             android:layout_height="match_parent"
             android:background="@drawable/divider"
-            android:layout_toLeftOf="@id/videoCall"/>
+            android:layout_toLeftOf="@id/grpvideoCall"/>
 
         <ImageView
-            android:id="@+id/call"
+            android:id="@+id/grpcall"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/call"
-            android:layout_toLeftOf="@id/div2"
+            android:layout_toLeftOf="@id/grpdiv2"
             android:layout_centerVertical="true"/>
 
         <View
@@ -146,7 +146,7 @@
             android:layout_width="1.5dp"
             android:layout_height="match_parent"
             android:background="@drawable/divider"
-            android:layout_toLeftOf="@id/call"/>
+            android:layout_toLeftOf="@id/grpcall"/>
 
         <!--<TextView
             android:id="@+id/lastMessage"

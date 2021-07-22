@@ -160,6 +160,16 @@
                 android:background="@drawable/experiment"
                 android:orientation="horizontal"
                 >
+                <TextView
+                    android:id="@+id/online"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:text="GROUPS"
+                    android:textSize="16.5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:fontFamily="monospace"
+                    />
 
                 <TextView
                     android:id="@+id/inbox"
