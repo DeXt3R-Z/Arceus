@@ -40,20 +40,21 @@
                 android:layout_alignParentTop="true"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="1dp"
-                android:src="@drawable/profilepic48" />
+                tools:src="@drawable/profilepic48" />
 
         </LinearLayout>
 
         <TextView
             android:id="@+id/namespace"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="11dp"
-            android:layout_marginBottom="2dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="11dp"
+            android:paddingBottom="4dp"
             android:layout_weight="1"
-            android:text="Lionel Messi"
-            android:textSize="17.5sp" />
+            tools:text="Lionel Messi"
+            android:textSize="17.5sp"
+            android:layout_marginRight="7dp"/>
 
         <ImageView
             android:id="@+id/call"
@@ -61,7 +62,8 @@
             android:layout_height="28dp"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="5dp"
-            android:src="@drawable/call" />
+            android:src="@drawable/call"
+            android:background="?android:attr/selectableItemBackground"/>
 
         <ImageView
             android:id="@+id/vcall"
@@ -81,8 +83,12 @@
         android:layout_weight="1"
         >
 
-        <TextView
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/warningText"
+            >
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -99,6 +105,8 @@
             android:textColor="#636363"
             android:background="@drawable/chat_top_warning"/>
 
+        </ScrollView>
+
             <ListView
                 android:id="@+id/ChatList"
                 android:layout_width="match_parent"
@@ -109,6 +117,7 @@
                 android:dividerHeight="0dp"
                 android:layout_below="@id/warningText"
                 android:layout_marginTop="2dp"
+                android:layout_marginBottom="5dp"
                 android:stackFromBottom="true"
                 android:transcriptMode="normal"
                 />
@@ -157,14 +166,16 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:background="@color/floating"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        >
 
-        <ImageView
+        <ImageButton
             android:layout_width="27dp"
             android:layout_height="27dp"
             android:layout_gravity="center"
             android:layout_marginLeft="8dp"
-            android:src="@drawable/emoji" />
+            android:src="@drawable/emoji"
+            android:background="?android:attr/selectableItemBackground"/>
 
         <EditText
             android:id="@+id/textInput"
@@ -179,28 +190,34 @@
             android:textColorHint="@color/last_text"
             android:textSize="16dp" />
 
-        <ImageView
-            android:layout_width="27dp"
-            android:layout_height="27dp"
+        <ImageButton
+            android:id="@+id/files"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="8dp"
             android:rotation="-45"
-            android:src="@drawable/attach" />
+            android:src="@drawable/attach"
+            android:background="#00ffffff"/>
 
-        <ImageView
-            android:layout_width="27dp"
-            android:layout_height="27dp"
+        <ImageButton
+            android:id="@+id/selfie"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
-            android:src="@drawable/snap" />
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/snap"
+            android:background="?android:attr/selectableItemBackground"/>
 
-        <ImageView
+        <!--<ImageButton
             android:layout_width="27dp"
             android:layout_height="27dp"
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:src="@drawable/voicerecorder" />
+            android:src="@drawable/voicerecorder"
+            android:background="?android:attr/selectableItemBackground"/>-->
 
 
     </LinearLayout>
@@ -212,7 +229,7 @@
             android:layout_gravity="center"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:src="@drawable/send"
+            android:src="@drawable/mic"
             android:clickable="true"
             android:focusable="true"
             android:background="?android:attr/selectableItemBackground"
