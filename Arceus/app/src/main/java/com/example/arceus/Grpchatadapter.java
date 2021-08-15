@@ -10,8 +10,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class grpchatadapter extends ArrayAdapter<grpchat> {
-    public grpchatadapter(Activity context, ArrayList<grpchat> grp_chat)
+public class Grpchatadapter extends ArrayAdapter<Grpchat> {
+    public Grpchatadapter(Activity context, ArrayList<Grpchat> grp_chat)
     {
         super(context,0,grp_chat);
     }
@@ -23,23 +23,23 @@ public class grpchatadapter extends ArrayAdapter<grpchat> {
         {
             item1= LayoutInflater.from(getContext()).inflate(R.layout.activity_grpmainscreen,parent,false);
         }
-        grpchat pos=getItem(position);
-        TextView name=item1.findViewById(R.id.grpname);
+        Grpchat pos=getItem(position);
+        TextView name=item1.findViewById(R.id.name);
         name.setText(pos.getgrpName());
 
-        TextView date=item1.findViewById(R.id.grpdate);
+        TextView date=item1.findViewById(R.id.date);
         date.setText(pos.getgrpDate());
 
-        TextView lastText=item1.findViewById(R.id.grplastMessage);
+        TextView lastText=item1.findViewById(R.id.lastMessage);
         lastText.setText(pos.getgrpLastText());
 
-        TextView typing=item1.findViewById(R.id.grptyping);
-        typing.setText(pos.getgrpTyping());
+//        TextView typing=item1.findViewById(R.id.grptyping);
+//        typing.setText(pos.getgrpTyping());
 
-        TextView pending=item1.findViewById(R.id.grppending);
+        TextView pending=item1.findViewById(R.id.pending);
         pending.setText(pos.getgrpPendingMessages());
 
-        ImageView dp=item1.findViewById(R.id.grpdisplayPicture);
+        ImageView dp=item1.findViewById(R.id.displayPicture);
         dp.setImageResource(pos.getgrpDP());
 
         return item1;

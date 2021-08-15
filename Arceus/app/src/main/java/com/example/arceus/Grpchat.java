@@ -1,9 +1,9 @@
 package com.example.arceus;
 
-public class grpchat {
+public class Grpchat {
     String grpName,grpLastText,grpDate,grpPendingMessages,grpTyping;
     int grpDisplayPic;
-    public grpchat(String name1,String lastText1, String date1, String pendingMessages1, String typing1, int dp1)
+    public Grpchat(String name1,String lastText1, String date1, String pendingMessages1, String typing1, int dp1)
     {
         grpName=name1;
         grpLastText=lastText1;

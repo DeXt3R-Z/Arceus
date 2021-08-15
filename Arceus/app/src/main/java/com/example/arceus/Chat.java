@@ -3,15 +3,16 @@ package com.example.arceus;
 import android.graphics.drawable.Drawable;
 
 public class Chat {
-    String mName,mLastText,mDate,mPendingMessages,mTyping;
+    String mName,mLastText,mDate,mPendingMessages;
     int mDisplayPic;
-    public Chat(String name,String lastText, String date, String pendingMessages, String typing, int dp)
+    long mPhoneNumber;
+    public Chat(String name,String lastText, String date, String pendingMessages, long phoneNumber, int dp)
     {
         mName=name;
         mLastText=lastText;
         mDate=date;
         mPendingMessages=pendingMessages;
-        mTyping=typing;
+        mPhoneNumber=phoneNumber;
         mDisplayPic=dp;
     }
     public String getNaame()
@@ -30,9 +31,9 @@ public class Chat {
     {
         return mPendingMessages;
     }
-    public String getTyping()
+    public long getPhoneNumber()
     {
-        return mTyping;
+        return mPhoneNumber;
     }
     public int getDP()
     {

@@ -43,6 +43,7 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/Groupsie"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="9"
@@ -145,9 +146,9 @@
 
             </carbon.widget.RelativeLayout>
 
-            <carbon.widget.Divider
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="1.5dp"
                 android:background="@color/divider"
                 android:layout_marginLeft="0.5dp"
                 android:layout_marginRight="0.5dp"

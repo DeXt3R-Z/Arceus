@@ -4,16 +4,22 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -36,16 +42,14 @@ public class ChatBox extends AppCompatActivity {
                 String store=text.getText().toString();
                 if(!store.equals(""))
                 {
-                storemessages.add(new IndividualText(store));
-                messageList.setAdapter(cba);
-                text.setText("");
-                store="";
+                    storemessages.add(new IndividualText(store));
+                    messageList.setAdapter(cba);
+                    text.setText("");
+                    store="";
                 }
+
 //                messageList.setTranscriptMode(ListView.TRANSCRIPT_MODE_NORMAL);
 //                messageList.setStackFromBottom(true);
-
-
-
 
                 //EditText text=findViewById(R.id.textInput);
 //                String store=text.getText().toString();
@@ -67,7 +71,41 @@ public class ChatBox extends AppCompatActivity {
 //                store="";
             }
         });
+        EditText txt=findViewById(R.id.textInput);
+        txt.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                String val=s.toString();
+                if(val.isEmpty())
+                {
+                    send.setImageResource(R.drawable.mic);
+                }
+                else
+                {
+                    send.setImageResource(R.drawable.send);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+
+        Bundle bundle=getIntent().getExtras();
+        String nme=bundle.getString("titleName");
+        int deepee=bundle.getInt("dp");
+        long phNumber=bundle.getLong("phno");
+        TextView titleName=findViewById(R.id.namespace);
+        titleName.setText(nme);
+        ImageView dp=findViewById(R.id.dp);
+        dp.setImageResource(deepee);
 
         LinearLayout goback=findViewById(R.id.goBack);
         goback.setOnClickListener(new View.OnClickListener() {
@@ -75,6 +113,45 @@ public class ChatBox extends AppCompatActivity {
             public void onClick(View v) {
                 storemessages.clear();
                 finish();
+            }
+        });
+
+        ImageView call=findViewById(R.id.call);
+
+        call.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:"+phNumber));
+                startActivity(intent);
+            }
+        });
+
+        ImageButton selfie=findViewById(R.id.selfie);
+        selfie.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent selfiecam=new Intent(MediaStore.INTENT_ACTION_STILL_IMAGE_CAMERA);
+                startActivity(selfiecam);
+            }
+        });
+
+        ImageButton files=findViewById(R.id.files);
+        files.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Intent.ACTION_GET_CONTENT);
+                //System call Action attribute
+                intent.setType("*/*");
+                //Set file type
+                intent.addCategory(Intent.CATEGORY_OPENABLE);
+                startActivity(intent);
+                // Add Category attribute
+//                try{
+//                    startActivity(intent);
+//                }catch(Exception e){
+//                    Toast.makeText(this, "The file manager was not opened correctly", Toast.LENGTH_SHORT).show();
+//                }
             }
         });
 
