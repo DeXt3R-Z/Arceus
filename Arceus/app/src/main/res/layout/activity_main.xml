@@ -18,16 +18,18 @@
         android:orientation="vertical">
 
         <RelativeLayout
+            android:id="@+id/PrivateMessages"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="9"
             android:layout_marginTop="5dp"
             android:layout_marginLeft="3dp"
-            android:layout_marginRight="3dp">
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/side_tab" />
+            android:layout_marginRight="3dp"
+            android:background="@drawable/side_tab">
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:background="@drawable/side_tab" />-->
 
             <com.example.arceus.VerticalTextView
                 android:id="@+id/verticalTextView2"
@@ -43,7 +45,7 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/Groupsie"
+            android:id="@+id/GroupMessages"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="9"
@@ -222,19 +224,16 @@
 
         </carbon.widget.LinearLayout>
 
-        <ListView
-            android:id="@+id/list"
+        <RelativeLayout
+            android:id="@+id/fragment_chatList"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="15"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:orientation="horizontal"
-            android:divider="@android:color/transparent"
-            android:dividerHeight="4dp"
-            android:scrollbars="none"/>
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            />
 
         <carbon.widget.LinearLayout
             android:layout_width="match_parent"

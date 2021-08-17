@@ -8,6 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.fragment.app.Fragment;
+
 import java.util.ArrayList;
 
 public class ChatAdapter extends ArrayAdapter<Chat> {

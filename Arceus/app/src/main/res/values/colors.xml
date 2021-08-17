@@ -16,4 +16,5 @@
     <color name="divider">#353535</color>
     <color name="last_text">#988F7C</color>
     <color name="chatbg">#1E1E1E</color>
+    <color name="transparent">#00000000</color>
 </resources>
