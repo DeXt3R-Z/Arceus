@@ -25,7 +25,7 @@ import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class Backup extends AppCompatActivity {
 
     ViewPager2 viewpager;
     TabLayout tab;
@@ -61,14 +61,12 @@ public class MainActivity extends AppCompatActivity {
         viewpager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
             public void onPageSelected(int position) {
-                viewpager.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);
                 tab.selectTab(tab.getTabAt(position));
             }
         });
         tab.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                viewpager.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);
                 viewpager.setCurrentItem(tab.getPosition());
             }
 
@@ -109,9 +107,14 @@ public class MainActivity extends AppCompatActivity {
         pmessages.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+//                Intent groups=new Intent(MainActivity.this,GroupchatActivity.class);
+//                startActivity(groups);
                 Private_ChatList_Fragment priv=new Private_ChatList_Fragment();
-                //viewpager.setAdapter(verticalFragment_adapter);
-                viewpager.setCurrentItem(0,true);
+//                FragmentManager fm=getSupportFragmentManager();
+//                FragmentTransaction pchats=fm.beginTransaction();
+//                pchats.replace(R.id.fragment_chatList,priv);
+//                pchats.commit();
+                viewpager.setCurrentItem(0);
 
                 //Styling
                 pmessages.setBackgroundResource(R.drawable.side_tab);
@@ -127,12 +130,7 @@ public class MainActivity extends AppCompatActivity {
                 Groups_ChatList_Fragment grp=new Groups_ChatList_Fragment();
 //                FragmentTransaction gchats=getSupportFragmentManager().beginTransaction();
 //                gchats.add(R.id.fragment_chatList,grp).commit();
-                //getSupportFragmentManager().beginTransaction().remove(FragmentAdapter.private_chat).commit();
-                //viewpager.setAdapter(fa2);
-
-                viewpager.setOrientation(ViewPager2.ORIENTATION_VERTICAL);
-                viewpager.setCurrentItem(1,true);
-                //Styling
+                viewpager.setCurrentItem(3);
                 gmessages.setBackgroundResource(R.drawable.side_tab);
                 pmessages.setBackgroundResource(R.color.transparent);
                 grpMessages.setTextColor(getResources().getColor(R.color.floating));

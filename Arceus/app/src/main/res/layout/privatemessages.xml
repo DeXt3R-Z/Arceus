@@ -5,14 +5,15 @@
     android:background="@drawable/chatbg"
     android:foreground="?android:attr/selectableItemBackground">
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/displayPicture"
         android:layout_width="56dp"
         android:layout_height="56dp"
         android:layout_marginRight="8dp"
         android:layout_marginLeft="8dp"
         android:layout_centerVertical="true"
-        android:src="@drawable/tanmay"/>
+        android:src="@drawable/tanmay"
+        />
 
     <RelativeLayout
         android:layout_width="match_parent"

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -70,7 +71,11 @@ public class Private_ChatList_Fragment extends Fragment {
 //                pp.setOnClickListener(new View.OnClickListener() {
 //                    @Override
 //                    public void onClick(View v) {
-//                        //this
+//                        Bundle b1=new Bundle();
+//                        FloatingDp floatdp=new FloatingDp();
+//                        b1.putInt("deepee",block.get(position).getDP());
+//                        floatdp.setArguments(b1);
+//                        ((MainActivity)getActivity()).dpFragmentReplace();
 //                    }
 //                });
                 startActivity(i);
